@@ -7,7 +7,8 @@
  *     if you know their length
  *
  ****************************************************************************/
-//error at line 69 (i think. pretty sure)
+//fix error, add position
+
 
 import java.util.Random;
 import java.util.Scanner;
@@ -61,8 +62,9 @@ public class BinarySearch {
 						newArrLen += addInd;
 						int[] newValues = new int[newArrLen];
 						
-						for(int counter = 0; counter < newArrLen-1; counter++) {
+						for(int counter = 0; counter < values.length - 1; counter++) {
 							newValues[counter] = values[counter];
+							System.out.println("\n" + newValues[counter] + " - " + values[counter]);
 						}
 						newValues[newArrLen] = userNum;
 						
