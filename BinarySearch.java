@@ -3,12 +3,13 @@
  * Created by: Julie Nguyen
  * Created on: Sept 2018
  * Created for: ICS4U
- * This program calculates the number of logs that will fit on a truck,
- *     if you know their length
+ * This program generates a list of 250 random values and sorts them. It then
+ * 		allows the user to input a number and searches for that number in the
+ * 		list
  *
  ****************************************************************************/
-//fix error, add position
 
+//error is still not fixed
 
 import java.util.Random;
 import java.util.Scanner;
@@ -33,8 +34,8 @@ public class BinarySearch {
 		System.out.println("\nSorted values: ");
 		NumSort(values);
 		
-		int newArrLen = values.length;
-		int addInd = 0;
+		//int newArrLen = values.length;
+		//int addInd = 0;
 		
 		do {
 			System.out.println("\nEnter a number from 1 to 500 to search in values (-1 to exit): ");
@@ -52,34 +53,33 @@ public class BinarySearch {
 				String search = NumSearch(values, userNum);
 				System.out.print("\n" + search);
 				
-				if(search == "Not found.") {
-					System.out.print(" Add number to values? (1 for yes, 2 for no) ");
-					userInput.nextLine();
-					int userAdd = userInput.nextInt();
+				//if(search == "Not found.") {
+					//System.out.print(" Add number to values? (1 for yes, 2 for no) ");
+					//userInput.nextLine();
+					//int userAdd = userInput.nextInt();
 					
-					if(userAdd == 1) {
-						addInd ++;
-						newArrLen += addInd;
-						int[] newValues = new int[newArrLen];
-						
-						for(int counter = 0; counter < values.length - 1; counter++) {
-							newValues[counter] = values[counter];
-							System.out.println("\n" + newValues[counter] + " - " + values[counter]);
-						}
-						newValues[newArrLen] = userNum;
-						
-						System.out.println("\nAdded. New Sorted values: ");
-						NumSort(newValues);
-					}
-					else if(userAdd == 2) {
-						System.out.print("Ok.\n");
-					}
-					else {
-						System.out.print("Invalid.\n");
-						System.exit(0);
-					}
-					
-				}
+					//if(userAdd == 1) {
+					//	addInd ++;
+					//	newArrLen += addInd;
+					//	int[] newValues = new int[newArrLen];
+					//	
+					//	for(int counter = 0; counter < values.length - 1; counter++) {
+					//		newValues[counter] = values[counter];
+					//		System.out.println("\n" + newValues[counter] + " - " + values[counter]);
+					//	}
+					//	newValues[newArrLen] = userNum;
+					//	
+					//	System.out.println("\nAdded. New Sorted values: ");
+					//	NumSort(newValues);
+					//}
+					//else if(userAdd == 2) {
+					//	System.out.print("Ok.\n");
+					//}
+					//else {
+					//	System.out.print("Invalid.\n");
+					//	System.exit(0);
+					//}
+				//}
 			}
 		} while(true);
 	}
